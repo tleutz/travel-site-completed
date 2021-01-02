@@ -1,0 +1,69 @@
+.primary-nav {
+    padding-top: 50px;
+
+    /* add back for large screen nav menu
+    @mixin atMedium {
+        padding-top: 0;
+    }
+    */
+
+    /* lesson 40 styling header */
+    /* add back for large screen nav menu
+    &--pull-right {
+        @mixin atMedium {
+            float: right;
+        }
+    }
+    */
+
+    ul {
+        margin: 0;
+        padding: 0;
+        @mixin clearfix;
+
+        @mixin atMedium {
+            margin: 0 200px;
+        }
+    }
+
+    li {
+        background-color: rgba($mainBlue, .95);
+        list-style: none;
+        padding-right: 20px;
+        border-bottom: .05rem solid #fff;
+
+        /* add back for large screen nav menu
+        @mixin atMedium {
+            float: left;
+            background-color: rgba($mainBlue, 0);
+            border-bottom: none;
+        }
+        */
+    }
+
+    li:last-child {
+        padding-right: 0;
+
+        
+        @mixin atMedium {
+            padding-right: 20px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+        display: block;
+        padding: 12px 0;
+        color: #FFF;
+
+        @mixin atMedium {
+            color: #FFF;
+            text-shadow: 1px 1px 2px rgba(54, 50, 50, .5);
+
+            &.is-current-link {
+                color: #fabb69;
+            }
+        }
+    }
+}
